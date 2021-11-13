@@ -19,7 +19,7 @@ public class Stage3Activity extends AppCompatActivity {
     private ActivityStage3Binding binding;
     private View view;
     private Intent intent;
-    private String uriString;
+    private String uriString, name, email;
     private InputStream Stream;
     private Uri uri;
 
@@ -30,6 +30,9 @@ public class Stage3Activity extends AppCompatActivity {
        view = binding.getRoot();
        setContentView(view);
        intent = getIntent();
+
+       name = intent.getStringExtra("name");
+       email = intent.getStringExtra("email");
 
        Bitmap bitmap = (Bitmap) intent.getParcelableExtra("viewImage");
        binding.viewPhotoS3.setImageBitmap(bitmap);
@@ -45,5 +48,7 @@ public class Stage3Activity extends AppCompatActivity {
            e.printStackTrace();
        }
 
+       binding.textName.setText(name);
+       binding.textEmail.setText(email);
     }
 }

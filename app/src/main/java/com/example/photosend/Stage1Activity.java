@@ -86,8 +86,6 @@ public class Stage1Activity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         intent = new Intent(getApplicationContext(), Stage2Activity.class);
-                        // intent.putExtra("viewImage", bitmap);
-                        // intent.putExtra("uriImage", cameraUri);
                         intent.putExtra("uriImage", cameraUri.toString());
                         startActivity(intent);
                     }

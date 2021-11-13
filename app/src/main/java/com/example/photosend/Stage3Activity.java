@@ -92,7 +92,7 @@ public class Stage3Activity extends AppCompatActivity {
        binding.btnSendMail.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               composeEmail(email, "Hi, This is an email",uri, message);
+               composeEmail(email, "Hello " + name + "!",uri, message);
            }
        });
     }
